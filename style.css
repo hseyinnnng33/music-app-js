@@ -1,0 +1,596 @@
+@import url("https://fonts.googleapis.com/css2?family=Anton&family=Asap&family=Black+Han+Sans&family=Faster+One&family=Inter&family=Lexend+Deca:wght@600&family=Manrope&family=Nosifer&family=Orienta&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,900&family=Russo+One&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+}
+
+html{
+    background-color: #000;
+}
+
+#genel{
+    width: 100%;
+    min-height: 100vh;
+    background-color: #000;
+    position: relative;
+}
+
+ul{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+nav{
+    width: 100%;
+    height: 70px;
+    background-color: #000;
+    border-bottom: 1px solid #fff;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+}
+
+nav .icerik{
+    max-width: 1300px;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav .icerik .nav-sarki-sol{
+    width: 300px;
+    display: flex;
+    align-items: center;
+}
+
+.nav-sarki-sol img{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+
+.nav-sarki-sol h2{
+    color: #fff;
+    margin-left: 20px;
+}
+
+
+.nav-sarki-sol img.don{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    animation: don 5s infinite linear;
+}
+
+
+nav .icerik .orta h2{
+    font-size: 20px;
+    color: #fff;
+}
+
+nav .icerik ul{
+    display: flex;
+}
+
+.icerik ul li{
+    margin: 0 20px;
+    padding: 0 5px;
+    transition: .2s;
+    cursor: pointer;
+}
+
+nav .icerik ul li a{
+    color: #fff;
+    font-size: 16px;
+    transition: .2s;
+    cursor: pointer;
+}
+
+/* box-shadow: rgba(158, 151, 151, 0.922) 0px 1px 3px 0px, rgba(199, 194, 194, 0.922) 0px 0px 0px 1px; */
+
+
+nav .icerik ul li a:hover{
+    color: #dedada;
+}
+
+.header{
+    width: 100%;
+    height: 200px;
+    position: relative;
+}
+
+.header .resim{
+    width: 100%;
+    height: 100%;
+}
+
+.header .resim img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.header .yazi{
+    position: absolute;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.yazi h2{
+    font-size: 30px;
+}
+
+.yazi p{
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.sarkilar-benzer{
+    width: 100%;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.sarkilar-benzer h2{
+    color: #fff;
+    margin: 1px 0;
+    font-size: 30px;
+}
+
+.sarkilar-benzer p{
+    color: #fff;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.sarkilar-benzer .icerik{
+    max-width: 1300px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sarkilar-benzer .icerik .sol-icerik{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 400px;
+}
+
+.sarkilar-benzer .icerik .sol-icerik a{
+    width: 120px;
+    height: 120px;
+    border-radius: 50%; 
+    display: flex;
+    margin: 10px;
+    position: relative;
+}
+
+a button{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: none;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+
+
+.sol-icerik a span{
+    position: absolute;
+    background-color: transparent;
+    border: 1px solid #fff;
+    width: 20px;
+    height: 20px;
+    padding: 10px;
+    border-radius: 50%;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.sol-icerik a .durdur span{
+    color: #fff;    
+    border: none;
+    font-size: 40px;
+}
+
+.sol-icerik a .durdur.active{
+    display: flex;
+    z-index: 4;
+    cursor: pointer;
+}
+
+.sol-icerik a img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    transition: .2s;
+}
+
+.sarkilar-benzer .icerik .sol-icerik a img:hover{    
+    transform: scale(1.1);
+}
+
+.sarkilar-benzer .icerik .sag-icerik{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 400px;
+}
+
+.sarkilar-benzer .icerik .sag-icerik a{
+    width: 120px;
+    height: 120px;
+    border-radius: 50%; 
+    display: flex;
+    margin: 10px;
+    position: relative;
+}
+
+.sag-icerik a span{
+    position: absolute;
+    background-color: transparent;
+    border: 1px solid #fff;
+    width: 20px;
+    height: 20px;
+    padding: 10px;
+    border-radius: 50%;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.sag-icerik a img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    transition: .2s;
+}
+
+.sarkilar-benzer .icerik .sag-icerik a img:hover{    
+    transform: scale(1.1);
+}
+
+.orta-icerik a img:hover{
+    transform: scale(1.1);
+}
+
+.orta-icerik a img{
+    border-radius: 20px;
+    transition: .2s;
+    width: 320px;
+    height: 320px;
+}
+
+.orta-icerik a{
+    position: relative;
+}
+
+.orta-icerik a span{
+    position: absolute;
+    background-color: transparent;
+    border: 1px solid #fff;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    color: #fff;
+    margin: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+a img.active{
+    animation: don 5s infinite linear;
+}
+
+@keyframes don{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+.ara-populer{
+    max-width: 1300px;
+    margin: 0 auto;
+    margin-top: 60px;
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+    text-align: center;
+}
+
+.ara-populer .icerik{
+    width: 100%;
+    margin: 10px auto;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 1px solid #dedada;
+    border-bottom: 1px solid #dedada;
+}
+
+.ara-populer .icerik h2{
+    color: #fff;
+}
+
+.sarki{
+    width: 250px;
+    text-align: left;
+}
+
+.sarkilar-populer{
+    width: 100%;
+    margin-top: 40px;
+}
+
+.sarkilar-populer .icerik {
+    max-width: 1300px;
+    margin: 0 auto;
+    display: flex;
+    
+}
+
+.sarkilar-populer .icerik .sag{
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    margin-left: 40px;
+}
+
+.sarkilar-populer .icerik .sag h2{
+    font-size: 18px;
+}
+
+.sarkilar-populer .icerik .sag p{
+    font-size: 14px;
+    margin: 5px 0;
+    color: #939292;
+}
+
+.sarkilar-populer .icerik .sol-icerik-1 .ilk-h2{
+    color: #fff;
+    font-size: 22px;
+    margin: 5px;
+}
+
+.ilk-p{
+    color: #fff;
+    font-weight: 400;
+    margin: 5px 0 20px 0;
+}
+
+.sarkilar-populer .icerik .sol-icerik-1 .alt-bar ul li{
+    display: flex;
+    align-items: center;
+    color: #fff;
+    width: 600px;
+    border-right: 10px solid red;
+    background-color: #1c1b1b;
+    border-radius: 5px;
+    padding: 0;
+    margin: 10px 0;
+}
+
+.sarkilar-populer .icerik .sol-icerik-1 .alt-bar ul li .yazi-1{
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+    height: 100%;
+}
+
+.alt-bar ul li .yazi-1 h2{
+    font-size: 16px;
+    text-align: left;
+}
+
+ul li .yazi-1 p{
+    font-size: 14px;
+}
+
+.sarkilar-populer .icerik .sol-icerik-1 .alt-bar ul li img{
+    width: 75px;
+    border-radius: 5px;
+}
+
+.sayim{
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+.sayim h2{
+    font-size: 14px;
+    margin-top: 20px;
+}
+
+.sayim p{
+    font-size: 14px;
+    color: #3e3d3d;
+}
+
+.sayim ul{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.sayim ul li{
+    width: 50px;
+    height: 80px;
+    margin: 1px;
+    font-size: 20px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #1c1b1b;
+}
+
+.sayim ul div{
+    font-size: 40px;
+    margin: 0 2px;
+    height: 100%;
+}
+
+.alt-bolum-harita{
+    width: 100%;
+    margin-top: 60px;
+}
+
+.alt-bolum-harita .harita-icerik{
+    max-width: 1300px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.harita-icerik .sol{
+    display: flex;
+    flex-direction: column;
+}
+
+.harita-icerik .sol h2{
+    color: #fff;
+    font-size: 20px;
+}
+
+.harita-icerik .sol p{
+    color: #939292;
+    margin: 5px 0;
+}
+
+.harita-icerik .sol img{
+    width: 100%;
+    height: 100%;
+}
+
+.resim-harita{
+    width: 550px;
+    background-color: #fff;
+    margin-top: 20px;
+    position: relative;
+}
+
+.resim-harita span{
+    position: absolute;
+    color: red;
+    display: block;
+    top: 17%;
+    left: 50%;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.sag-harita{
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.sag-harita h2{
+    font-size: 20px;
+}
+
+.sag-harita p{
+    color: #939292;
+}
+
+.sag-harita .kart{
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.kart button{
+    border: none;
+    background-color: transparent;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.kart button span{
+    color: #fff;
+    font-size: 30px;
+}
+
+.kart .resim-kart img{
+    width: 270px;
+    height: 270px;
+    border-radius: 50%;
+    animation: don 20s infinite linear;
+}
+
+.resim-kart p{
+    text-align: center;
+    font-size: 16px;
+    padding: 5px;
+    margin: 5px 0;
+    color: #fff;
+    border-top: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+    width: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+}
+
+@keyframes don{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
